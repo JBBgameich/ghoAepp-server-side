@@ -6,8 +6,5 @@ Depends on [pdf-table-extract](https://github.com/JBBgameich/pdf-table-extract) 
 
 If you want to setup your own server, just copy this repository to the target folder, most likely `/var/www/html/gho`, and set up a cron job that executes `python3 update.py` in `/var/www/html/gho` at least every two hours. The url of your json files for the app will be `http://your-server.tld/gho/vertretungsplan.json`. To view it from a browser, open `http://your-server.tld/gho/vertretungsplan.html`
 
-Run
-`sed -i s/"<username>"/"$username"/g extract-json.py extract-html.sh`
-and
-`sed -i s/"<password>"/"$password"/g extract-json.py extract-html.sh`
-to insert your password for accessing the original PDF file.
+## Usage
+`python3 update.py $USERNAME $PASSWORD`
