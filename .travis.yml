@@ -9,9 +9,5 @@ install:
     - sudo python3 setup.py install
     - cd ..
 
-before_script:
-    - sed -i s/"<username>"/"$USERNAME"/g extract-json.py extract-html.sh
-    - sed -i s/"<password>"/"$PASSWORD"/g extract-json.py extract-html.sh
-
 script:
-    - python3 update.py
+    - python3 update.py $USERNAME $PASSWORD
